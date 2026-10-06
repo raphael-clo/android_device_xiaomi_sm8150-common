@@ -7,9 +7,6 @@
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
-
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -145,15 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Consumer IR
-ifeq ($(TARGET_HAS_IR),true)
-PRODUCT_PACKAGES += \
-    android.hardware.ir-service.lineage
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-endif
-
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -276,18 +264,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
-# LiveDisplay, sdm backend: exposes the panel's QDCM colour modes and picture
-# adjustment through libsdm-disp-vndapis (the sm8150 display blob set). The
-# HAL's sepolicy comes from device/lineage/sepolicy/qcom via SEPolicy.mk.
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sdm
-
-# No LiveDisplay colour profiles: the colour mode (Settings > Display >
-# Colors) already selects the panel's QDCM mode through SurfaceFlinger. With
-# both, the HAL applied the calibration's default (sRGB) at startup and the two
-# settings disagreed. Picture adjustment stays.
-$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
-
 # Media configs
 PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
@@ -358,6 +334,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/sm8150 \
     hardware/qcom-caf/sm8350 \
     vendor/qcom/opensource/usb/etc
+
+# Platform
+TARGET_BOARD_PLATFORM := msmnile
 
 # Public libraries
 PRODUCT_COPY_FILES += \
