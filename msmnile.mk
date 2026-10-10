@@ -299,25 +299,11 @@ PRODUCT_PACKAGES += \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
-    libqti-perfd-client
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/google/interfaces \
-    hardware/google/pixel \
-    hardware/google/pixel/power-libperfmgr \
     hardware/qcom/display \
     hardware/qcom/media \
     vendor/qcom/opensource/usb/etc
+
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
@@ -425,7 +411,8 @@ PRODUCT_COPY_FILES += \
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     display \
-    init
+    init \
+    perf
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
