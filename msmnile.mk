@@ -30,8 +30,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
@@ -261,8 +259,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/alarm \
     hardware/qcom/display \
-    hardware/qcom/media \
-    vendor/qcom/opensource/usb/etc
+    hardware/qcom/media
 
 
 # Platform
@@ -295,13 +292,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.mi.btmac.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh \
-    usb_compositions.conf
+    init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.power.rc \
-    init.qcom.usb.rc \
     init.target.rc \
     init.xiaomi.rc
 
@@ -335,10 +329,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti \
-    android.hardware.usb.gadget-service.qti
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -377,6 +367,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     perf \
+    usb \
     wfd
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
