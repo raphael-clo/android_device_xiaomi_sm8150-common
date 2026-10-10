@@ -54,6 +54,7 @@ lib_fixups: lib_fixups_user_type = {
 namespace_imports = [
     'device/xiaomi/sm8150-common',
     'hardware/xiaomi',
+    'vendor/qcom/common/vendor/adreno/r',
 ]
 
 module = ExtractUtilsModule(
