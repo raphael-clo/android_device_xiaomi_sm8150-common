@@ -334,8 +334,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-# Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
@@ -368,6 +366,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     perf \
     usb \
+    vibrator \
     wfd
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
