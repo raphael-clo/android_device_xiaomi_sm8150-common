@@ -521,7 +521,6 @@ vendor/lib64/libvpphvx.so
 vendor/lib64/libvpplibrary.so
 
 # WiFi
-vendor/bin/cnss-daemon
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
