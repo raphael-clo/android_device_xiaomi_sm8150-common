@@ -11,11 +11,6 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qti.chg_policy.sh",
-    src: "bin/init.qti.chg_policy.sh",
-    vendor: true,
-}
 
 sh_binary {
     name: "init.qti.dcvs.sh",

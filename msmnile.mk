@@ -172,10 +172,6 @@ PRODUCT_PACKAGES += \
     qcom.fmradio
 endif
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -301,7 +297,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mi.btmac.sh \
     init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     usb_compositions.conf
 
@@ -378,12 +373,14 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     audio \
     av \
+    charging \
     display \
     init \
     perf \
     wfd
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_HIDL_QTI_HEALTH := false
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8150-common/sm8150-common-vendor.mk)
