@@ -173,12 +173,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
-# Still sourced from sm8350: the sm8150 display tree does not ship this file.
-# It is a config for the closed snapdragon-color-libs blob, not a build artifact
-# of the display HAL, so a plain PRODUCT_COPY_FILES from the disabled sm8350
-# tree is unaffected by that tree's Android.bp files being commented out.
+# Snapdragon color configuration
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/sm8350/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
+    $(LOCAL_PATH)/configs/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -329,10 +326,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/qcom-caf/sm8150 \
-    hardware/qcom-caf/sm8350 \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/qcom/display \
+    hardware/qcom/media \
     vendor/qcom/opensource/usb/etc
 
 # Platform
