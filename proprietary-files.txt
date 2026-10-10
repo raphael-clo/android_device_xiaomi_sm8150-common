@@ -16,9 +16,6 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
-# ANT+
-system_ext/lib/com.qualcomm.qti.ant@1.0.so
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 
 # ACDB Loader - from haydn - V816.0.18.0.UKKMIXM
 vendor/lib/libacdb-fts.so
@@ -78,8 +75,6 @@ vendor/lib/libcdsprpc.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
-vendor/lib64/libcdfw.so
-vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -216,11 +211,9 @@ vendor/bin/xtwifi-inet-agent
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/libcacertclient.so
-vendor/lib64/libgps.utils.so
 vendor/lib64/libjnihelper.so
-vendor/lib64/libloc_core.so
-vendor/lib64/liblocation_api.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk

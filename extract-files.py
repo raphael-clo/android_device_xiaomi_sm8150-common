@@ -68,7 +68,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.data.latency@1.0',
         'vendor.qti.hardware.data.lce@1.0',
         'vendor.qti.hardware.data.qmi@1.0',
-        'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.mwqemadapter@1.0',
         'vendor.qti.hardware.radio.am@1.0',
         'vendor.qti.hardware.radio.ims@1.0',
@@ -137,6 +136,7 @@ namespace_imports = [
     'vendor/qcom/common/vendor/display',
     'vendor/qcom/common/vendor/display/4.14',
     'vendor/qcom/common/vendor/gps-legacy',
+    'vendor/qcom/common/vendor/media/legacy',
 ]
 
 module = ExtractUtilsModule(
