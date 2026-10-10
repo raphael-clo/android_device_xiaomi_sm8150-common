@@ -207,9 +207,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
 # Media configs
-PRODUCT_PACKAGES += \
-    media_codecs_c2.xml \
-    media_codecs_performance_c2.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml
 
 # Codec2 AVC/HEVC encoders built on the QTI V4L2 engine
 # (hardware/qcom-caf/sm8150/media/c2-venc). The prebuilt QTI Codec2 encoders
@@ -364,6 +364,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
+    media \
     perf \
     usb \
     vibrator \
