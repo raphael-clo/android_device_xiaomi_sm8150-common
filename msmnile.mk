@@ -157,16 +157,8 @@ PRODUCT_PACKAGES += \
 # (android.hardware.graphics.composer-qti-display.xml) -- do not also declare
 # it in manifest.xml or check_vintf fails with a duplicate FqInstance.
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.composer-qti-display.xml \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
     gralloc.qcom \
-    hwcomposer.qcom \
-    libsdedrm \
-    vendor.qti.hardware.display.allocator-service
-
-PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
 # Snapdragon color configuration
@@ -438,7 +430,10 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
-    adreno
+    adreno \
+    display
+
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8150-common/sm8150-common-vendor.mk)

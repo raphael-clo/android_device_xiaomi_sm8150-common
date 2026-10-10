@@ -55,6 +55,8 @@ namespace_imports = [
     'device/xiaomi/sm8150-common',
     'hardware/xiaomi',
     'vendor/qcom/common/vendor/adreno/r',
+    'vendor/qcom/common/vendor/display',
+    'vendor/qcom/common/vendor/display/4.14',
 ]
 
 module = ExtractUtilsModule(
