@@ -264,6 +264,7 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 
 PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/alarm \
     hardware/qcom/display \
     hardware/qcom/media \
     vendor/qcom/opensource/usb/etc
@@ -374,6 +375,7 @@ PRODUCT_COPY_FILES += \
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
+    alarm \
     audio \
     display \
     init \
