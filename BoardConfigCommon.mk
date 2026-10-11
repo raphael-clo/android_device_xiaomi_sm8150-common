@@ -42,6 +42,9 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 
+# Audio
+$(call soong_config_set,qtiaudio,feature_gki,true)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
