@@ -173,6 +173,9 @@ PRODUCT_PACKAGES += \
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_msmnile)
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Input
 PRODUCT_PACKAGES += \
     sm8150-tavil-snd-card_Button_Jack.kl \
