@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer-qti-display.xml \
     gralloc.qcom \
+    libsdedrm \
     vendor.qti.hardware.memtrack-service
 
 # Snapdragon color configuration
