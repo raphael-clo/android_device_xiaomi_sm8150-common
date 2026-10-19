@@ -75,6 +75,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 an
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
 ifneq ($(TARGET_IS_LEGACY),true)
 BOARD_KERNEL_IMAGE_NAME := Image
 else

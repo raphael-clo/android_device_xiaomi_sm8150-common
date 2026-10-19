@@ -258,6 +258,11 @@ PRODUCT_SOONG_NAMESPACES += \
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/firmware/regulatory.db:$(TARGET_COPY_OUT_VENDOR)/firmware/regulatory.db \
+    $(LOCAL_PATH)/firmware/regulatory.db.p7s:$(TARGET_COPY_OUT_VENDOR)/firmware/regulatory.db.p7s
+
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
