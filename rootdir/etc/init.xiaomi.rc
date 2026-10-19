@@ -13,6 +13,10 @@ on init
     chown system system /dev/fortsense_fp
 
 on boot
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+    chmod 0664 /dev/fortsense_fp
+    chown system system /dev/fortsense_fp
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
