@@ -115,6 +115,8 @@ PRODUCT_PACKAGES += \
     libsdedrm \
     vendor.qti.hardware.memtrack-service
 
+$(call soong_config_set,qtidisplay,gralloc4,true)
+
 # Snapdragon color configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
